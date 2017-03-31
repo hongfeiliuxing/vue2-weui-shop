@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # vue2-weui-shop
 
 > '小店'
@@ -19,3 +20,6 @@ npm run build --report
 ```
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+=======
+# vue2-weui-shop
+>>>>>>> 51cea986956a57b85af83e131faf6c629c0f895a
