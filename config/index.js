@@ -2,18 +2,22 @@
 var path = require('path')
 
 module.exports = {
+  // 编辑打包环境使用
   build: {
+    // 标示是否为生产或开发环境的变量
     env: require('./prod.env'),
     index: path.resolve(__dirname, '../dist/index.html'),
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
+    // 生产环境是否需要 sourceMap
     productionSourceMap: true,
     // Gzip off by default as many popular static hosts such as
     // Surge or Netlify already gzip all static assets for you.
     // Before setting to `true`, make sure to:
     // npm install --save-dev compression-webpack-plugin
     productionGzip: false,
+    // 生产环境使用Gzip压缩的扩展文件
     productionGzipExtensions: ['js', 'css'],
     // Run the build command with an extra argument to
     // View the bundle analyzer report after build finishes:
@@ -21,10 +25,15 @@ module.exports = {
     // Set to `true` or `false` to always turn it on or off
     bundleAnalyzerReport: process.env.npm_config_report
   },
+  // 开发环境使用
   dev: {
+    // 标示是否为生产或开发环境的变量
     env: require('./dev.env'),
+    // 开发环境默念端口
     port: 8080,
+    // 服务启动后是否自动浏览器
     autoOpenBrowser: true,
+    // 资源目录
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {},

@@ -9,13 +9,17 @@ exports.assetsPath = function (_path) {
   return path.posix.join(assetsSubDirectory, _path)
 }
 
+// 返回样式需要的loaders
 exports.cssLoaders = function (options) {
   options = options || {}
 
+  // 默认的样式处理 loader
   var cssLoader = {
     loader: 'css-loader',
     options: {
+      // 生产环境最小化
       minimize: process.env.NODE_ENV === 'production',
+      // 是否需要生成sourceMap
       sourceMap: options.sourceMap
     }
   }
