@@ -3,7 +3,7 @@
     <div class="product">
       <div class="product-list">
         <div class="product-item" v-for="item in productList">
-          <a href="#">
+          <router-link :to="'/productdetail/' + item.id">
             <div class="img">
               <img src="../../assets/images/vue.png" alt="">
             </div>
@@ -15,8 +15,11 @@
                 <span>￥：</span><span>100</span>
               </div>
             </div>
-          </a>
+          </router-link>
         </div>
+      </div>
+      <div class="loading">
+        请稍等，正在加载...
       </div>
     </div>
   </div>
@@ -56,12 +59,17 @@ export default {
   },
   methods: {
     loadMore () {
-      var _t = Math.random()
-      this.productList.push({
-        id: _t,
-        src: '',
-        name: 'i' + _t
-      })
+      var self = this
+
+      setTimeout(() => {
+        for (let i = 0; i < 8; i++) {
+          self.productList.push({
+            id: i,
+            src: '',
+            name: 'i' + i
+          })
+        }
+      }, 3000)
     }
   }
 }

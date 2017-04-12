@@ -29,6 +29,10 @@ a {
   margin-top: $headerHeight;
 }
 
+.content-bottom {
+  margin-bottom: $headerHeight;
+}
+
 /*导航栏部分*/
 .footer {
   position: fixed;

@@ -1,6 +1,7 @@
 export default {
   currentTitleName: '我的商店', // 显示当前页的标题
   isNeedShowBackButton: false, // 是否需要显示返回按钮
+  isNeedShowTabNav: true, // 是否需要显示导航栏
   allCatalogList: [
     {
       id: '001',

@@ -3,12 +3,12 @@
     <div class="header">
       <shop-header></shop-header>
     </div>
-    <div class="content">
+    <div class="content" :class="{'content-bottom':needMarginBottom}">
       <keep-alive>
         <router-view></router-view>
       </keep-alive>
     </div>
-    <div>
+    <div v-show="$store.state.isNeedShowTabNav">
       <tab-nav></tab-nav>
     </div>
   </div>
@@ -24,9 +24,24 @@ export default {
     shopHeader,
     tabNav
   },
+  data () {
+    return {
+      needMarginBottom: true
+    }
+  },
+  methods: {
+    // 判断需要显示导航栏
+    handleIsNeedTabNav (to) {
+      this.$store.commit('setIsNeedShowTabNav', to.name === '我的商店')
+    },
+    isNeedMarginBottom (to) {
+      this.needMarginBottom = to.name === '我的商店'
+    }
+  },
   watch: {
+    // 监控路由变化
     '$route' (to, from) {
-      console.log(to, from)
+      // console.log(to, from)
       var self = this
       self.$store.commit('setcurrentTitleName', to.name)
       if (to.name === '我的商店') {
@@ -34,6 +49,8 @@ export default {
       } else {
         self.$store.commit('setIsNeedShowBackButton', true)
       }
+      self.handleIsNeedTabNav(to)
+      self.isNeedMarginBottom(to)
     }
   }
 }

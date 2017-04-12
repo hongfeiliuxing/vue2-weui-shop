@@ -10,5 +10,11 @@ export default {
    */
   setIsNeedShowBackButton (state, isNeed) {
     state.isNeedShowBackButton = isNeed
+  },
+  /*
+   * 设置是否需要显示导航栏
+   */
+  setIsNeedShowTabNav (state, isNeed) {
+    state.isNeedShowTabNav = isNeed
   }
 }

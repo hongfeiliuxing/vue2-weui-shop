@@ -4,6 +4,7 @@ import Router from 'vue-router'
 import index from '@/components/index/index'
 import catalog from '@/components/index/catalog'
 import productlist from '@/components/index/productlist'
+import productDetail from '@/components/index/productDetail'
 
 Vue.use(Router)
 
@@ -23,6 +24,11 @@ export default new Router({
       path: '/productlist/:id',
       name: '商品列表',
       component: productlist
+    },
+    {
+      path: '/productdetail/:id',
+      name: '商品详情',
+      component: productDetail
     }
   ]
 })

@@ -34,7 +34,7 @@
           </div>
           <div class="product-list">
             <div class="product-item" v-for="item in productList">
-              <a href="#">
+              <router-link :to="'/productdetail/' + item.id">
                 <div class="img">
                   <img src="../../assets/images/vue.png" alt="">
                 </div>
@@ -46,7 +46,7 @@
                     <span>￥：</span><span>100</span>
                   </div>
                 </div>
-              </a>
+              </router-link>
             </div>
           </div>
         </div>
