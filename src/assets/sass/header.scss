@@ -1,0 +1,18 @@
+.shop-header {
+  position: fixed;
+  z-index: 500;
+  width: 100%;
+  top: 0;
+  height: $headerHeight;
+  line-height: $headerHeight;
+  background-color: #efdfdf;
+  clear: both;
+  .header-title {
+    font-size: 2em;
+    width: 100%;
+    text-align: center;
+  }
+  :nth-child(1) {
+    float: left;
+  }
+}

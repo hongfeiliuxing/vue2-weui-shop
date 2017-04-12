@@ -1,0 +1,58 @@
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+body {
+  line-height: 1.6;
+  font-family: -apple-system-font, "Helvetica Neue", sans-serif;
+  /* 1 ÷ 父元素的font-size × 需要转换的像素值 = em值  font-size: 62.5%; 相当于 1em = 10px*/
+  font-size: 62.5%;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+a img {
+  border: 0;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.container {
+  position: relative;
+  height: 100%;
+}
+
+.content {
+  margin-top: $headerHeight;
+}
+
+/*导航栏部分*/
+.footer {
+  position: fixed;
+  background-color: #ccc999;
+  width: 100%;
+  height: $headerHeight;
+  bottom: 0px;
+  display: flex;
+  justify-content: space-between;
+  z-index: 500;
+  .tab-item {
+    display: block;
+    // flex: 1;
+    width: 33.33%;
+    flex-grow: 1;
+    text-align: center;
+
+    img {
+      width: 20px;
+      padding-top: 5px;
+    }
+
+    .tab-title {
+      color: #ddd;
+    }
+  }
+}

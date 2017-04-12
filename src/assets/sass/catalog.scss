@@ -1,0 +1,29 @@
+.catalog-list {
+  margin-bottom: $headerHeight;
+  .catalog-item {
+    display: flex;
+    align-items: center;
+    margin: 0.5em;
+    color: #bbbfff;
+    border-bottom: 0.01em solid #ccc;
+    img {
+      width: 4.5em;
+      border-radius: 50%;
+    }
+    .title {
+      font-size: 1.8em;
+      width: 15em!important;
+      line-height: 1.5em!important;
+      word-break: break-all;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;
+    }
+    .dirention {
+      width: 1em;
+      font-size: 1.8em;
+    }
+  }
+}
